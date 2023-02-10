@@ -3,23 +3,29 @@
     <image class="logo" src="/static/logo.png"></image>
     <view class="text-area">
       <text class="title">1231231</text>
-      <u-button type="primary" text="确定"></u-button>
-		<u-button type="primary" :plain="true" text="镂空"></u-button>
-		<u-button type="primary" :plain="true" :hairline="true" text="细边"></u-button>
-		<u-button type="primary" :disabled="disabled" text="禁用"></u-button>
-		<u-button type="primary" loading loadingText="加载中"></u-button>
-		<u-button type="primary" icon="map" text="图标按钮"></u-button>
-		<u-button type="primary" shape="circle" text="按钮形状"></u-button>
-		<u-button text="渐变色按钮" color="linear-gradient(to right, rgb(66, 83, 216), rgb(213, 51, 186))"></u-button>
-		<u-button type="primary" size="small" text="大小尺寸"></u-button>
+		<!-- <u-button type="primary" loading loadingText="加载中"></u-button> -->
+    <view>asdfafffffffffffffff</view>
+    <custom-status-bar title="我是标题" > </custom-status-bar>
     </view>
   </view>
 </template>
 
 <script>
+import { onPageScroll, onLoad, onShow, onHide, onReachBottom,onNavigationBarButtonTap } from '@dcloudio/uni-app'
 import { ref, onMounted } from "vue";
+import CustomStatusBar from '@/components/custom-status-bar/index.vue'
 export default {
+  components:{
+    CustomStatusBar,
+  },
   setup() {
+
+    onShow(() => {
+      console.log('onShow')
+    })
+    onNavigationBarButtonTap((e) => {
+       console.log('onNavigationBarButtonTap',e)
+    })
     onMounted(() => {
       console.log("process.env.", process.env.VITE_APP_ENV);
     });
@@ -45,8 +51,8 @@ export default {
 }
 
 .text-area {
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
 }
 
 .title {

@@ -13,7 +13,7 @@
                 "navigationBarTitleText": "群成员",
                 "navigationBarBackgroundColor": "#fff",
                 "navigationBarTextStyle": "black",
-				// "navigationStyle":"custom",
+				"navigationStyle":"custom",
                 "app-plus": {
                     "titleNView": {
                         "buttons": [

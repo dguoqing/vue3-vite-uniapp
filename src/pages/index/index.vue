@@ -5,7 +5,7 @@
       <text class="title">1231231</text>
 		<!-- <u-button type="primary" loading loadingText="加载中"></u-button> -->
     <view>asdfafffffffffffffff</view>
-    <custom-status-bar title="我是标题" > </custom-status-bar>
+    <custom-status-bar title="我是标题33" > </custom-status-bar>
     </view>
   </view>
 </template>
@@ -44,7 +44,7 @@ export default {
 .logo {
   height: 200rpx;
   width: 200rpx;
-  margin-top: 200rpx;
+  /* margin-top: 200rpx; */
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 50rpx;

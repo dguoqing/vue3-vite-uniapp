@@ -12,6 +12,7 @@
                 <u-button type="primary" loading loadingText="加载中"></u-button>
             </view>
         </view>
+        <u-button type="primary" @click="getUserInfo">获取用户信息</u-button>
     </view>
 </template>
 
@@ -33,6 +34,14 @@ export default {
                 url: '/pages/other/index',
             })
         }
+        const getUserInfo = () => {
+            uni.getUserProfile({
+              desc:'用户登录',
+                success: res => {
+                    console.log('用户信息', res)
+                },
+            })
+        }
 
         onShow(() => {
             console.log('onShow')
@@ -47,6 +56,7 @@ export default {
         return {
             onTitleClick,
             actualHeight,
+            getUserInfo,
         }
     },
 }

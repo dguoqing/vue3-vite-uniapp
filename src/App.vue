@@ -6,7 +6,8 @@ export default {
 
         //登录
         uni.login({
-            success: async (res) => {
+            success: async res => {
+                console.log(res, 'dfddddddddd')
                 // const token = await login({
                 //     code: res.code,
                 // })

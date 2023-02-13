@@ -19,4 +19,4 @@ export default defineConfig({
     },
 })
 
-console.log('配置', process.env.VITE_APP_ENV, process.env.NODE_ENV)
+// console.log('配置', process.env.VITE_APP_ENV, process.env.NODE_ENV)

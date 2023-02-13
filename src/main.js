@@ -42,4 +42,3 @@ function getSystemInfo(app) {
 		}
 	})
 }
-console.log('process.env.VITE_APP_ENV', process.env.VITE_APP_ENV)

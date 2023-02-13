@@ -58,6 +58,7 @@ export default {
 
         const onBack = () => {
             console.log('onBack')
+            emit('onBack',)
         }
 
 

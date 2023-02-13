@@ -1,11 +1,16 @@
 <template>
-  <view class="content">
-    <image class="logo" src="/static/logo.png"></image>
-    <view class="text-area">
-      <text class="title">1231231</text>
-		<!-- <u-button type="primary" loading loadingText="加载中"></u-button> -->
-    <view>asdfafffffffffffffff</view>
-    <custom-status-bar title="我是标题33" > </custom-status-bar>
+  <view class="container">
+    <custom-status-bar title="我是自定义标题" @onTitleClick="onTitleClick" :isShowTitleIcon="true">
+      <template v-slot:left>
+       <u-icon size="22" name="photo"></u-icon>
+      </template>
+    </custom-status-bar>
+    <view class="content">
+      <image class="logo" src="/static/logo.png"></image>
+      <view class="text-area">
+        <text class="title">1231231</text>
+      <u-button type="primary" loading loadingText="加载中"></u-button>
+      </view>
     </view>
   </view>
 </template>
@@ -20,6 +25,12 @@ export default {
   },
   setup() {
 
+    const onTitleClick = () => {
+      uni.navigateTo({
+        url:'/pages/other/index'
+      })
+    }
+
     onShow(() => {
       console.log('onShow')
     })
@@ -29,11 +40,20 @@ export default {
     onMounted(() => {
       console.log("process.env.", process.env.VITE_APP_ENV);
     });
+
+
+    return {
+      onTitleClick
+    }
   },
 };
 </script>
 
 <style>
+.container{
+  position: relative;
+  margin-top: 169rpx;
+}
 .content {
   display: flex;
   flex-direction: column;
@@ -45,9 +65,9 @@ export default {
   height: 200rpx;
   width: 200rpx;
   /* margin-top: 200rpx; */
-  margin-left: auto;
+  /* margin-left: auto;
   margin-right: auto;
-  margin-bottom: 50rpx;
+  margin-bottom: 50rpx; */
 }
 
 .text-area {

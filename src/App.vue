@@ -6,12 +6,13 @@ export default {
 
         //登录
         uni.login({
-            success: async (res) => {
-                const token = await login({
-                    code: res.code,
-                })
+            success: async res => {
+                console.log(res, 'dfddddddddd')
+                // const token = await login({
+                //     code: res.code,
+                // })
 
-                uni.setStorageSync('token', token.access_token)
+                // uni.setStorageSync('token', token.access_token)
             },
         })
     },
